@@ -14,9 +14,7 @@ export class MenuComponent implements OnInit {
   menuList: MenuItem[] = [
     { id: 1, description: 'Home', selected: true},
     { id: 2, description: 'Lista giochi', selected: false},
-    { id: 4, description: 'Dettaglio videogioco', selected: false},
-    { id: 3, description: 'Modifica lista', selected: false}
-  
+    { id: 3, description: 'Modifica gioco', selected: false}
   ];
 
   constructor() { }

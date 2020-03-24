@@ -1,6 +1,6 @@
 <ul>
     <li *ngFor="let item of gameList">
         {{item.name}}
-        <button (click)="showDetail(item.id)">Vai al dettaglio</button>
+        <button (click)="showDetail(item.id)">Dettaglio{{item.nome}}</button>
     </li>
 </ul>

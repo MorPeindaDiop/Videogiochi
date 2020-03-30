@@ -12,7 +12,7 @@ export class LoginService {
     if (username != null && username !== ''
       && password != null && password !== '') {
       sessionStorage.setItem("user", username);
-      this.router.navigateByUrl('/portale/home');
+      this.router.navigateByUrl('/home');
     } else {
       alert('Login errata!')
     }

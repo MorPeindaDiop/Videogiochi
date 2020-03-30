@@ -7,7 +7,8 @@ import { GameListComponent } from './components/game-list/game-list.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { EditGameComponent } from './components/edit-game/edit-game.component';
 import { GameDetailComponent } from './components/game-detail/game-detail.component';
-
+import { PageNoteFoundComponent } from './page-note-found/page-note-found.component';
+import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,12 +16,19 @@ import { GameDetailComponent } from './components/game-detail/game-detail.compon
     GameListComponent,
     MenuComponent,
     EditGameComponent,
-    GameDetailComponent
+    GameDetailComponent,
+    PageNoteFoundComponent,
+    LoginComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
+
+
+
 export class AppModule { }

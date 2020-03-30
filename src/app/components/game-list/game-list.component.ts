@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { GameItem } from 'src/app/models/game-item.interface';
 import { GameListService } from 'src/app/services/game-list.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-game-list',
@@ -8,12 +9,9 @@ import { GameListService } from 'src/app/services/game-list.service';
   styleUrls: ['./game-list.component.scss']
 })
 export class GameListComponent implements OnInit {
-
-  @Output('showDetail')
-  showDetailEvent: EventEmitter<number> = new EventEmitter();
-
+  
   gameList: GameItem[] = [];
-  constructor(private gameListService: GameListService) {
+  constructor(private gameListService: GameListService,private router:Router) {
     this.gameList = this.gameListService.getGameList();
   }
 
@@ -21,7 +19,7 @@ export class GameListComponent implements OnInit {
   }
 
   showDetail(id: number){
-    this.showDetailEvent.emit(id);
+    this.router.navigateByUrl('/detail/' + id);
   }
 
 }
